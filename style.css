@@ -13,3 +13,38 @@
     overflow: hidden;
     background: linear-gradient(#87ceeb,#e0f6ff);
 }
+
+.pipe {
+     position: absolute;
+     bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.nuvem {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 20s infinite liner;
+}
+
+@keyframes pipe-animation{
+    from {
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+    
+    
+        
+ 
