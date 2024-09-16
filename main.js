@@ -1,6 +1,11 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const nuvem = document.querySelector('.nuvem');
+const starButton = document.querySelector('.star');
+const gameOverScreen = document.querySelector('.game-over');
+const scoreElement = document.getElementById('score'); // Elemento de pontuação
 
+audioSart = new Audio('./')
 const jump = () => {
   mario. classLit.add('jump');
 
