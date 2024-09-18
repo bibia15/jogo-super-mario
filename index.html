@@ -8,10 +8,13 @@
 </head>
 <body>
  <div class="game-board" >
-    <img src="/img/clouds.png" class="nuvem">
-    <img src="/img/mario.gif" class="mario">
-    <img src="/img/pipe.png"  class="pipe">
- </div>  
+    <img src="/img/clouds.png" class="nuvem start-hidden">
+    <img src="/img/mario.gif" class="mario start-hidden">
+    <img src="/img/pipe.png"  class="pipe start-hidden">
+    <button class="start" onclick="startGame()" >Iniciar</button>
+    </div>
+    
+    <div class="score">Pontuação: <span id = "score">0</span></div>
 
 </body>
 </html>
