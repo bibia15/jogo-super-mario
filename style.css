@@ -14,6 +14,11 @@
     background: linear-gradient(#87ceeb,#e0f6ff);
 }
 
+.pipe, .mario, .nuvem {
+    opacity: 0; /* Torna as imagens invisíveis */
+    transition: opacity 0.5s ease-in-out; /* Suaviza a transição ao mostrar as imagens*/
+}
+
 .pipe {
      position: absolute;
      bottom: 0;
@@ -38,7 +43,7 @@
 }
 
 button {
-    backgroud: green;
+    background: green;
     color:white;
     font-weight: bold;
     font-size: 1.5rem;
@@ -52,15 +57,35 @@ button {
 }
 
 button:hover {
-    boder: 2px solid green;
-    backgroud: none;
+    border: 2px solid green;
+    background: none;
     color: green;
 }
 
+button:start {
+    display: block;
+}
+
+.score {
+    position:absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: rgba ( 0,0,0,0.5); 
+    color: white; 
+    font-size: 24px; 
+    padding: 10px; 
+    border-radius: 8px; 
+    font-family: "arial", sans-serif;
+}
+
+ .score span {
+    font-weight: bold; 
+    font-size: 30px; 
+ }
 .game-over {
     width: 100%;
     height: 100vh;
-    backgroud:  red;
+    background:  red;
     display: none;
     align-items: center;
     justify-content: center;
@@ -73,7 +98,7 @@ button:hover {
 .game-over h1 {
     font-size:  3rem;
     color: red;
-    text-alingn: center;
+    text-align: center;
     margin-top: 15rem;
 }
 
