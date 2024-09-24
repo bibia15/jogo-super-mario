@@ -5,8 +5,8 @@ const startButton = document.querySelector('.start');
 const gameOverScreen = document.querySelector('.game-over');
 const scoreElement = document.getElementById('score'); 
 
-audioStart = new Audio('./sound/audio_theme.m3');
-const gameOverSound = new Audio('./sound/game_over.m3');
+audioStart = new Audio('./sound/audio_theme.mp3');
+const gameOverSound = new Audio('./sound/game_over.mp3');
 
 let gameStarted = false;
 let score = 0; 
