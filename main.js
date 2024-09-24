@@ -3,13 +3,13 @@ const pipe = document.querySelector('.pipe');
 const nuvem = document.querySelector('.nuvem');
 const startButton = document.querySelector('.start');
 const gameOverScreen = document.querySelector('.game-over');
-const scoreElement = document.getElementById('score'); // Elemento de pontuação
+const scoreElement = document.getElementById('score'); 
 
 audioStart = new Audio('./sound/audio_theme.m3');
 const gameOverSound = new Audio('./sound/game_over.m3');
 
 let gameStarted = false;
-let score = 0; // Variável de pontuação
+let score = 0; 
 
 const startGame = () => {
   gameStarted = true;
@@ -20,11 +20,11 @@ const startGame = () => {
  startButton.style.display = 'none';
  mario.style.opacity = '1';
  pipe.style.opacity = '1';
- clouds.style.opacity = '1';
+ nuvem.style.opacity = '1';
 }
- const jump = () => {
+const jump = () => {
 if (gameStarted) {
-    mario. classLit.add('jump');
+    mario.classList.add('jump');
 
   setTimeout(() => {
     mario.classList.remove('jump');
@@ -32,9 +32,9 @@ if (gameStarted) {
 }
 }
 
-cont updateScore = () => {
-  score += 1; // Incrementa a pontuação
-  scoreElement.textContent = score; // Atualiza o elemento HTML com uma nova pontuação
+const updateScore = () => {
+  score += 1;
+  scoreElement.textContent = score;
 }
 
 const loop = setInterval(() => {
@@ -42,14 +42,14 @@ const pipePosition = pipe.offsetLeft;
 const marioPosition = +window.getComputedStyle(mario).bottom.replace('px','');
 
 if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
-  pipe.computedStyle.animation = 'none';
-  pipe.computedStyle.left = `${pipePosition}px`;
+  pipe.style.animation = 'none';
+  pipe.style.left = `${pipePosition}px`;
 
-  mario.computedStyle.animation = 'none';
-  mario.computedStyle.left = `${marioPosition}px`;
+  mario.style.animation = 'none';
+  mario.style.left = `${marioPosition}px`;
 
   mario.src= './img/game-over.png';
-  mario.computedStyleMap.width = '75px';
+  mario.style.width = '75px';
   mario.style.marginLeft = '50px';
   audioStart.pause();
 
@@ -58,13 +58,13 @@ if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
   clearInterval(loop);
   gameOverScreen.style.display = 'flex';
  } else if (pipePosition < 0 && gameStarted){
-   updateScore(); // Atualiza a pontuação quando o pipe sai da tela (Mario passou)
-   pipe.style.left = ''; // Renicia a posição do pipe
+   updateScore();
+   pipe.style.left = ''; 
  }
 },10);
 
-document. addEventListener('keydown', jump);
+document.addEventListener('keydown', jump);
 
-cont restargame = () => {
+const restartGame = () => {
   window.location.reload();
 }
